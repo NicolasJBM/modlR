@@ -54,10 +54,10 @@ compute_coefficients <- function(sample = NULL,
   moderator <- NULL
   moderation <- NULL
   
-  sample <- sketchR::prepare_sample(sample = sample, md_imputation = md_imputation, md_method = md_method, size = size)
+  sample <- modlR::prepare_sample(sample = sample, md_imputation = md_imputation, md_method = md_method, size = size)
   estimations <- list()
   for (i in 1:length(formulas)){
-    estimations[[i]] <- sketchR::fit_regression(sample = sample, formula = formulas[[i]], method = est_method, family = family)
+    estimations[[i]] <- modlR::fit_regression(sample = sample, formula = formulas[[i]], method = est_method, family = family)
   }
   
   estimations <- estimations %>%

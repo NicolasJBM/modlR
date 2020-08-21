@@ -8,7 +8,7 @@
 #' @param cluster      Character vector. Clusterings for errors.
 #' @return A formula to run in regressions. Interactions are introduced under the form "independent_x_moderator" and therefore the corresponding variable must be created in the dataset.
 #' @examples
-#' library(sketchR)
+#' library(modlR)
 #' model <- prep_model(dependent = "turnover",
 #'                     independent = c("distributive", "procedural"),
 #'                     moderator = "pay",

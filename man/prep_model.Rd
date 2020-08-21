@@ -36,7 +36,7 @@ A formula to run in regressions. Interactions are introduced under the form "ind
 Create a formula based on lists of variables. All independent variables will be interacted with the moderator if the latter is specified. Controls are not.
 }
 \examples{
-library(sketchR)
+library(modlR)
 model <- prep_model(dependent = "turnover",
                     independent = c("distributive", "procedural"),
                     moderator = "pay",

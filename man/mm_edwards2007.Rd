@@ -4,7 +4,8 @@
 \name{mm_edwards2007}
 \alias{mm_edwards2007}
 \title{Data from Edwards and Lambert 2007 for tests of moderated mediation.}
-\format{A tiblle with 1,307 observations and 17 variables:
+\format{
+A tiblle with 1,307 observations and 17 variables:
 \itemize{
 \item gen. Gender (raw)
 \item cen. Centrality (raw)
@@ -23,7 +24,8 @@
 \item satcgen. Interaction between Satisfaction and Gender
 \item fbkccenc. Interaction between Feedback and Centrality
 \item satccenc. Interaction between and Centrality
-}}
+}
+}
 \source{
 \url{http//:dx.doi.org/10.1037/1082-989X.12.1.1.supp}
 }
