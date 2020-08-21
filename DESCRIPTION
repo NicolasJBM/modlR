@@ -1,0 +1,43 @@
+Package: sketchR
+Title: Model Estimation and Evaluation
+Version: 1.1
+Date: 2019-08-26
+Authors@R: 
+    person(given = "Nicolas",
+           family = "Mangin",
+           role = c("aut", "cre"),
+           email = "nicolas.jb.mangin@gmail.com",
+           comment = c(ORCID = "0000-0002-1597-9376"))
+Description: Functions and interfaces to facilitate the construction and evaluation of models.
+Encoding: UTF-8
+LazyData: true
+License: GPL-3 | file LICENSE
+Depends: R (>= 3.6)
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.2
+VignetteBuilder: knitr
+Imports:
+    knitr,
+    tidyr,
+    dplyr,
+    shiny,
+    miniUI,
+    ggplot2,
+    ggthemes,
+    gridExtra,
+    purrr,
+    broom,
+    forcats,
+    plm,
+    AER,
+    lfe,
+    stringr,
+    tibble,
+    DiagrammeR,
+    systemfit,
+    stargazer,
+    texreg,
+    stats,
+    parallel,
+    mice,
+    writR
