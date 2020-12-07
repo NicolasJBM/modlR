@@ -1,7 +1,7 @@
 Package: modlR
 Title: Model Estimation and Evaluation
-Version: 1.1
-Date: 2019-08-26
+Version: 2.00
+Date: 2020-12-07
 Authors@R: 
     person(given = "Nicolas",
            family = "Mangin",
@@ -14,30 +14,17 @@ LazyData: true
 License: GPL-3 | file LICENSE
 Depends: R (>= 3.6)
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 VignetteBuilder: knitr
 Imports:
     knitr,
+    tibble,
     tidyr,
     dplyr,
-    shiny,
-    miniUI,
-    ggplot2,
-    ggthemes,
-    gridExtra,
     purrr,
-    broom,
-    forcats,
-    plm,
-    AER,
-    lfe,
-    stringr,
-    tibble,
-    DiagrammeR,
-    systemfit,
-    stargazer,
-    texreg,
     stats,
-    parallel,
-    mice,
-    writR
+    stringr,
+    systemfit,
+    lfe,
+    broom,
+    mice

@@ -77,7 +77,7 @@ analyze_path <- function(coefficients, moderations, mediations){
     dplyr::mutate(p.value = 2-2*pnorm(abs(estimate/sdev))) %>%
     dplyr::ungroup() %>%
     na.omit() %>%
-    dplyr::mutate(coeff = writR::stat_stars(estimate, p.value)) %>%
+    dplyr::mutate(coeff = modlR::fmt_stars(estimate, p.value)) %>%
     dplyr::filter(moderator != "base" | moderator == "base" & position == "low") %>%
     dplyr::mutate(position = dplyr::case_when(moderator == "base" ~ "all", TRUE ~ position)) %>%
     dplyr::mutate(moderator = dplyr::case_when(moderator == "base" ~ "", TRUE ~ moderator)) %>%
