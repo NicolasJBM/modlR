@@ -1,7 +1,7 @@
 Package: modlR
 Title: Model Estimation and Evaluation
 Version: 2.00
-Date: 2020-12-07
+Date: 2020-12-20
 Authors@R: 
     person(given = "Nicolas",
            family = "Mangin",
