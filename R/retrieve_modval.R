@@ -24,7 +24,6 @@
 retrieve_modval <- function(sample, moderators, types, allval){
   
   stopifnot(
-    tibble::is_tibble(sample),
     is.character(moderators),
     is.character(types),
     is.logical(allval)
@@ -75,7 +74,7 @@ retrieve_modval <- function(sample, moderators, types, allval){
       )
     ) %>%
     dplyr::select(-type) %>%
-    tidyr::unnest()
+    tidyr::unnest(modval)
   
   if (allval){
     results <- results %>%

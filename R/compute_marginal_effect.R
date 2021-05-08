@@ -50,6 +50,7 @@ compute_marginal_effect <- function(coefficients, moderations, indep, mediate = 
         upper_bound = estimate + std.error * stats::qnorm(1-p/2) 
       ) %>%
       dplyr::mutate(relation = paste("relation between", independent, "and", dependent, sep = " "))
+    
   } else {
     
     first_stage <- dplyr::filter(coefficients, independent == indep, dependent == mediate)
@@ -63,7 +64,7 @@ compute_marginal_effect <- function(coefficients, moderations, indep, mediate = 
         dplyr::filter(moderator == moderate) %>%
         dplyr::left_join(moderations, by = "moderator") %>%
         dplyr::mutate(init = base + moderation * modval) %>%
-        dplyr::select(mediator = independent, dependent, moderator, draw, modval, init) 
+        dplyr::select(independent, mediator = dependent, moderator, draw, modval, init) 
     }
     
     if (unique(second_stage$moderator) == "base"){
