@@ -4,10 +4,10 @@
 \alias{prepare_sample}
 \title{Compute the paths coefficients for analayses of moderated mediations.}
 \usage{
-prepare_sample(sample, md_imputation, md_method, size)
+prepare_sample(est_sample, md_imputation, md_method, size)
 }
 \arguments{
-\item{sample}{Tibble. Table containing the data.}
+\item{est_sample}{Tibble. Table containing the data.}
 
 \item{md_imputation}{Character. Kind of imputation ("multiple","single","deletion")}
 

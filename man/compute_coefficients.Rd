@@ -5,17 +5,17 @@
 \title{Compute the simple coefficients for several models}
 \usage{
 compute_coefficients(
-  sample = NULL,
+  est_sample = NULL,
   md_imputation = "multiple",
   md_method = "pmm",
   size = NA,
   formulas = NULL,
   est_method = "felm",
-  family = NA
+  est_family = NA
 )
 }
 \arguments{
-\item{sample}{Tibble. Initial sample.}
+\item{est_sample}{Tibble. Initial sample.}
 
 \item{md_imputation}{Character. Kind of imputation ("multiple","single","deletion")}
 
@@ -27,7 +27,7 @@ compute_coefficients(
 
 \item{est_method}{Character. Method for the regression ("glm", "felm", or "sysfit").}
 
-\item{family}{Character. Family for glm (e.g. "gaussian", "binomial") .}
+\item{est_family}{Character. Family for glm (e.g. "gaussian", "binomial") .}
 }
 \value{
 A tibble gwith all the coefficients associating each dependent, independent, and moderating variables.

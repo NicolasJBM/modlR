@@ -4,16 +4,16 @@
 \alias{fit_regression}
 \title{Compute the paths coefficients for analayses of moderated mediations.}
 \usage{
-fit_regression(sample, formula, method, family)
+fit_regression(est_sample, est_formula, est_method, est_family)
 }
 \arguments{
-\item{sample}{Tibble. Table containing the data.}
+\item{est_sample}{Tibble. Table containing the data.}
 
-\item{formula}{Formula or list of formulas for a system of equations.}
+\item{est_formula}{Formula or list of formulas for a system of equations.}
 
-\item{method}{Character. Method for the regression ("glm", "felm", or "sysfit").}
+\item{est_method}{Character. Method for the regression ("glm", "felm", or "sysfit").}
 
-\item{family}{Character. Family for glm (e.g. "gaussian", "binomial").}
+\item{est_family}{Character. Family for glm (e.g. "gaussian", "binomial").}
 }
 \value{
 A tibble gathering the regression coefficients.

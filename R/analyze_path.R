@@ -1,4 +1,4 @@
-#' Compute the moderated paths coefficients for analayses of moderated mediations.
+#' Compute the moderated paths coefficients for analyses of moderated mediations.
 #' @param coefficients Tibble. Output of the function compute_coefficients.
 #' @param moderations Tibble. Output of the function retrieve_modval with option "allval" FALSE.
 #' @param mediations List. List of vectors specifying the paths, from the first independent variable to the last dependent variable through the moderators in order.

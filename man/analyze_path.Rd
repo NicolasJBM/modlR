@@ -2,7 +2,7 @@
 % Please edit documentation in R/analyze_path.R
 \name{analyze_path}
 \alias{analyze_path}
-\title{Compute the moderated paths coefficients for analayses of moderated mediations.}
+\title{Compute the moderated paths coefficients for analyses of moderated mediations.}
 \usage{
 analyze_path(coefficients, moderations, mediations)
 }
@@ -17,7 +17,7 @@ analyze_path(coefficients, moderations, mediations)
 A tibble gathering all (direct, indirect, and total) the moderated path coefficients.
 }
 \description{
-Compute the moderated paths coefficients for analayses of moderated mediations.
+Compute the moderated paths coefficients for analyses of moderated mediations.
 }
 \references{
 Edwards, J. R., & Lambert, L. S. (2007). Methods for integrating moderation and mediation: a general analytical framework using moderated path analysis. Psychological Methods, 12(1), 1–22.

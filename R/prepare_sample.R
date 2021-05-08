@@ -1,5 +1,5 @@
 #' Compute the paths coefficients for analayses of moderated mediations.
-#' @param sample  Tibble. Table containing the data.
+#' @param est_sample  Tibble. Table containing the data.
 #' @param md_imputation Character. Kind of imputation ("multiple","single","deletion")
 #' @param md_method Character. Method for the imputation of missing data ("pmm", "mean", "sample", "deletion").
 #' @param size Integer. Size of the sample for each draw. If NA, use the sample size.
@@ -15,7 +15,7 @@
 #' @export
 
 
-prepare_sample <- function(sample, md_imputation, md_method, size){
+prepare_sample <- function(est_sample, md_imputation, md_method, size){
   
   stopifnot(
     md_imputation %in% c("multiple","single","deletion"),
@@ -24,26 +24,26 @@ prepare_sample <- function(sample, md_imputation, md_method, size){
       md_imputation != "deletion" & md_method != "deletion"
   )
   
-  if (is.na(size)) size <- nrow(sample) else size <- size
+  if (is.na(size)) size <- nrow(est_sample) else size <- size
   
   # Apply the desired imputation and sampling method
   if (md_imputation == "multiple"){
     
-    sample <- sample %>%
+    est_sample <- est_sample %>%
       dplyr::sample_n(size, replace = TRUE) %>%
       mice::mice(m = 1, meth = md_method, print=FALSE) %>%
       mice::complete()
     
   } else if (md_imputation == "single"){
     
-    sample <- sample %>%
+    est_sample <- est_sample %>%
       mice::mice(m = 1, meth = md_method, print=FALSE) %>%
       mice::complete() %>%
       dplyr::sample_n(size, replace = TRUE)
     
   } else {
     
-    sample <- na.omit(sample) %>%
+    est_sample <- na.omit(est_sample) %>%
       dplyr::sample_n(size, replace = TRUE)
     
   }
@@ -51,5 +51,5 @@ prepare_sample <- function(sample, md_imputation, md_method, size){
   rm(md_imputation, md_method, size)
   gc()
   
-  return(sample)
+  return(est_sample)
 }
